@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Job AutoApply Settings</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Job AutoApply</h1>
+    <p class="subtitle">Configure your profile for automatic applications.</p>
+
+    <div class="section">
+      <h2>Your Profile</h2>
+      <label for="name-input">Full Name:</label>
+      <input type="text" id="name-input" placeholder="e.g., Jane Doe">
+
+      <label for="email-input">Email:</label>
+      <input type="email" id="email-input" placeholder="e.g., jane.doe@example.com">
+       <!-- Add Phone if used by autofill -->
+       <label for="phone-input">Phone (Optional):</label>
+       <input type="tel" id="phone-input" placeholder="e.g., +1 555 123 4567">
+    </div>
+
+
+    <div class="section">
+      <h2>Your Skills</h2>
+      <div class="skills-input-area">
+          <input type="text" id="skill-input" placeholder="Type a skill and press Enter">
+      </div>
+      <div id="skills-container" class="skills-chips">
+          <!-- Skill chips will be rendered here -->
+          <span class="placeholder-chip">Add skills above...</span>
+      </div>
+
+    </div>
+
+    <div class="section">
+      <h2>Resume</h2>
+      <label for="resume-upload">Upload PDF or DOCX (Max 5MB):</label>
+      <input type="file" id="resume-upload" accept=".pdf,.doc,.docx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document">
+      <div id="resume-info">
+        <span id="resume-filename">No resume uploaded.</span>
+        <button id="remove-resume" class="remove-button" style="display: none;">Remove</button>
+      </div>
+      <progress id="upload-progress" value="0" max="100" style="width: 100%; display: none;"></progress>
+    </div>
+
+    <div class="section actions">
+      <button id="save-settings">Save Configuration</button>
+      <div id="status-message"></div>
+    </div>
+
+     <div class="section">
+        <h2>Saved Jobs</h2>
+        <div id="saved-jobs-list" class="job-list">
+            <p>Loading saved jobs...</p>
+            <!-- Saved jobs will be listed here -->
+        </div>
+     </div>
+
+  </div>
+  <!-- Ensure bundled popup script is loaded -->
+  <script src="../dist/popup.bundle.js"></script>
+</body>
+</html>

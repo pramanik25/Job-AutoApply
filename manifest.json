@@ -1,0 +1,46 @@
+{
+  "manifest_version": 3,
+  "name": "Job AutoApplicant",
+  "version": "1.1.0", 
+  "description": "Automated job application system for freshers on LinkedIn and Indeed.",
+  "permissions": [
+    "storage",       
+    "scripting",     
+    "activeTab",     
+    "notifications"   
+  ],
+  "host_permissions": [
+    "*://*.linkedin.com/*",
+    "*://*.indeed.com/*"
+  ],
+  "background": {
+    "service_worker": "dist/background.bundle.js", 
+    "type": "module" 
+  },
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+      "16": "assets/icons/icon16.png",
+      "48": "assets/icons/icon48.png",
+      "128": "assets/icons/icon128.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.linkedin.com/jobs/view/*", "*://*.linkedin.com/jobs/collections/*"], 
+      "js": ["dist/linkedin.bundle.js"],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": ["*://*.indeed.com/viewjob*", "*://*.indeed.com/jobs*"], 
+      "js": ["dist/indeed.bundle.js"], 
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["assets/icons/*.png"], 
+      "matches": ["<all_urls>"] 
+    }
+  ]
+}

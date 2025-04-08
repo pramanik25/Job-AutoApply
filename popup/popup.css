@@ -1,0 +1,256 @@
+/* popup/popup.css */
+body {
+    width: 380px; /* Slightly wider for better layout */
+    margin: 0;
+    padding: 0; /* Remove padding from body */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #f0f2f5;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .container {
+    padding: 15px 20px; /* Add padding inside the container */
+  }
+  
+  h1 {
+      font-size: 1.4em;
+      color: #1a1a1a;
+      margin-bottom: 5px;
+      text-align: center;
+  }
+  
+  .subtitle {
+      text-align: center;
+      font-size: 0.9em;
+      color: #666;
+      margin-top: 0;
+      margin-bottom: 20px;
+  }
+  
+  h2 {
+      font-size: 1.1em;
+      color: #0056b3; /* Accent color */
+      border-bottom: 1px solid #e0e0e0;
+      padding-bottom: 5px;
+      margin-top: 20px;
+      margin-bottom: 15px;
+  }
+  
+  .section {
+    margin-bottom: 20px;
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  }
+  
+  label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: 600;
+      font-size: 0.9em;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="file"] {
+    box-sizing: border-box; /* Include padding and border in element's total width/height */
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    transition: border-color 0.2s ease;
+  }
+  
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  input[type="tel"]:focus {
+      border-color: #007bff;
+      outline: none;
+  }
+  
+  input::placeholder {
+      color: #999;
+  }
+  
+  input[type="file"] {
+      padding: 5px; /* Less padding needed for file input */
+  }
+  
+  /* Make file input button look better */
+  input[type="file"]::file-selector-button {
+      padding: 5px 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      background-color: #f8f8f8;
+      cursor: pointer;
+      font-size: 0.9em;
+      margin-right: 10px;
+      transition: background-color 0.2s ease;
+  }
+  
+  input[type="file"]::file-selector-button:hover {
+      background-color: #e9e9e9;
+  }
+  
+  .skills-input-area {
+      margin-bottom: 10px;
+  }
+  
+  .skills-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 5px;
+    min-height: 20px; /* Ensure space even when empty */
+    padding: 5px;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+  }
+  
+  .skill-chip {
+    background-color: #e0eafc; /* Light blue */
+    color: #0056b3;
+    padding: 4px 10px;
+    border-radius: 15px;
+    display: inline-flex; /* Use inline-flex */
+    align-items: center;
+    font-size: 0.9em;
+    font-weight: 500;
+    line-height: 1.2;
+  }
+  
+  .placeholder-chip {
+      color: #999;
+      font-style: italic;
+      font-size: 0.9em;
+  }
+  
+  .remove-skill {
+    cursor: pointer;
+    margin-left: 6px;
+    color: #d9534f; /* Reddish color */
+    font-weight: bold;
+    font-size: 1.1em;
+    line-height: 1; /* Prevent extra height */
+  }
+  
+  .remove-skill:hover {
+      color: #c9302c; /* Darker red on hover */
+  }
+  
+  #resume-info {
+      margin-top: 5px;
+      font-size: 0.9em;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  }
+  
+  #resume-filename {
+      color: #555;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      max-width: 70%; /* Prevent long names from overlapping button */
+  }
+  
+  .remove-button {
+      background: none;
+      border: none;
+      color: #d9534f;
+      cursor: pointer;
+      font-size: 0.9em;
+      padding: 2px 5px;
+  }
+  .remove-button:hover {
+      text-decoration: underline;
+  }
+  
+  #upload-progress {
+    width: 100%;
+    margin-top: 8px;
+    height: 8px; /* Make progress bar slimmer */
+  }
+  
+  .actions {
+      text-align: center;
+      padding-top: 0; /* Remove top padding as button has margin */
+      background: none; /* No background for actions */
+      box-shadow: none;
+  }
+  
+  button#save-settings {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+    width: 100%;
+    transition: background-color 0.2s ease;
+    margin-top: 10px;
+  }
+  
+  button#save-settings:hover {
+    background-color: #0056b3;
+  }
+  
+  button#save-settings:active {
+      background-color: #004085;
+  }
+  
+  
+  #status-message {
+    margin-top: 15px;
+    font-size: 0.9em;
+    font-weight: 500;
+    text-align: center;
+    min-height: 1.2em; /* Reserve space */
+  }
+  
+  .status-success {
+      color: #28a745; /* Green */
+  }
+  
+  .status-error {
+      color: #dc3545; /* Red */
+  }
+  
+  /* Saved Jobs List */
+  .job-list {
+      max-height: 200px; /* Limit height and make scrollable */
+      overflow-y: auto;
+      border: 1px solid #e0e0e0;
+      border-radius: 4px;
+      padding: 10px;
+  }
+  
+  .job-item {
+      padding: 8px 0;
+      border-bottom: 1px dashed #eee;
+      font-size: 0.9em;
+  }
+  .job-item:last-child {
+      border-bottom: none;
+  }
+  .job-item a {
+      color: #0056b3;
+      text-decoration: none;
+      font-weight: 500;
+  }
+  .job-item a:hover {
+      text-decoration: underline;
+  }
+  .job-item span {
+      display: block;
+      font-size: 0.85em;
+      color: #777;
+  }
